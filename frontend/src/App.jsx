@@ -6,7 +6,8 @@ import { BrowserRouter ,Router, Route, Routes } from 'react-router-dom';
 import Home from './Components/Home'
 import Contact from './Components/Contact'
 import About from './Components/About'
-import Course from './Components/Course'
+import Courselist from './Components/Courselist'
+import Coursedetails from './Components/Coursedetails'
 
 
 export default function App() {
@@ -17,7 +18,8 @@ export default function App() {
    <Route path='/' element={<Home/>}/>
    <Route path='contact' element={<Contact/>}/>
    <Route path='about' element={<About/>}/>
-   <Route path='course' element={<Course/>}/>
+   <Route path='courselist' element={<Courselist/>}/>
+   <Route path="/courses/:id" element={<Coursedetails />} />
  </Routes>
  </BrowserRouter>
  </>

@@ -1,4 +1,5 @@
 import React from "react";
+import "./css/Footer.css";
 
 export default function Footer() {
     return (
@@ -6,7 +7,7 @@ export default function Footer() {
         <div>
         <div className="foot1">
         <ul>
-            <li>img</li>
+            <li><b>IT Solutions</b></li>
         </ul>
     </div>
     <div className="foot2">
@@ -40,7 +41,7 @@ export default function Footer() {
         </div>
 
         <div>
-        <h4>Copyright © 2025 AJS Solutions. All rights reserved.</h4>
+        <h4>Copyright © 2025 IT Solutions. All rights reserved.</h4>
         </div>
         </>
     );
