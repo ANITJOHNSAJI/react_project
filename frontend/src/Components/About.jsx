@@ -3,7 +3,7 @@ import Nav from "./Nav";
 import Footer from "./Footer";
 import about1 from "./images/about1.jpg"
 import about2 from "./images/about2.jpg"
-import "./css/About.css";
+import "./css/Style.css";
 
 export default function Contact() {
     return (

@@ -2,6 +2,7 @@ import React, { useState,useEffect } from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import home from "./images/home.webp"
+import "./css/Style.css";
 
 export default function Home() {
     return (
@@ -15,7 +16,7 @@ export default function Home() {
              <img src={home} alt="" />
             </div>
             <div>
-                <h2>Popular Courses</h2>
+               
             </div>
             <Footer/>
         </>
