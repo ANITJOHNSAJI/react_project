@@ -27,15 +27,11 @@ const CourseDetails = () => {
   if (loading) return <div className="spinner">Loading...</div>;
   if (error) return <div className="error">{error}</div>;
 
-  const handleBack = () => {
-    navigate('/courselist'); 
-  };
 
   return (
     <div className="course-details">
       {/* <Nav /> */}
-      <button className="back-button" onClick={handleBack}>Back</button>
-      <h2>{course.title}</h2>
+      <h2 className="course-title">{course.title}</h2>
       <img src={course.image} alt={course.title} className="course-image" />
       <p>{course.description}</p>
       <p><strong>Duration:</strong> {course.duration}</p>

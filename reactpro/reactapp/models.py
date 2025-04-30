@@ -9,3 +9,8 @@ class Course(models.Model):
     eligibility = models.CharField(max_length=200)
     fee = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.ImageField(upload_to='course_images/', null=True, blank=True)
+
+class Contact(models.Model):
+    name=models.CharField(max_length=100)
+    email=models.EmailField()
+    message=models.TextField()

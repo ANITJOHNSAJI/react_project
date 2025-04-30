@@ -24,24 +24,24 @@ const CourseList = () => {
   return (
     <>
       <Nav />
-      <div className="p-8">
-        <h1 className="text-4xl font-bold text-center mb-10">Our Courses</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="courselist-maindiv">
+        <h1 className="courselist-h1">Our Courses</h1>
+        <div className="courselist-cards">
           {courses.map(course => (
             <div 
               key={course.id} 
-              className="bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-transform transform hover:scale-105"
+              className="courselist-card"
               onClick={() => handleCourseClick(course.id)}
             >
               {course.image && (
                 <img 
                   src={course.image}
                   alt={course.title}
-                  className="w-full h-48 object-cover"
+                  className="courselist-image"
                 />
               )}
-              <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
+              <div className="courselist-card-content">
+                <h3 className="courselist-card-title">{course.title}</h3>
               </div>
             </div>
           ))}

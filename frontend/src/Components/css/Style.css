@@ -1,67 +1,25 @@
-/* General container for the CourseList page */
-.course-container {
-    padding: 40px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-}
-
-/* Course List Header */
-.course-container h1 {
-    font-size: 36px;
-    font-weight: bold;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
     color: #333;
-    margin-bottom: 30px;
-}
-
-/* Grid for course cards */
-.course-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
-}
-
-/* Styling for each course card */
-.course-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.course-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-/* Styling for course image */
-.course-image {
+    background-color: #f9f9f9;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Navbar */
+  .navbar {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: opacity 0.3s ease;
-}
-
-.course-card:hover .course-image {
-    opacity: 0.8;
-}
-
-/* Course details inside each card */
-.course-details {
-    padding: 20px;
-    text-align: left;
-}
-
-.course-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-}
-
-/* Navbar container */
-.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,54 +27,251 @@
     background-color: #333;
     color: white;
     font-family: Arial, sans-serif;
-}
-
-.navbar .logo {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar .logo {
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
     color: white;
-}
-
-.nav-links {
+  }
+  
+  .nav-links {
     display: flex;
     gap: 20px;
-}
-
-.nav-links a {
+  }
+  
+  .nav-links a {
     text-decoration: none;
     color: white;
     font-size: 18px;
     transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
+  }
+  
+  .nav-links a:hover {
     color: #00bcd4;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
+  }
+  
+  /* Home Page Headings */
+  .home-h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #0066cc;
+    margin-top: 40px;
+    animation: fadeInDown 1s ease-out;
+  }
+  
+  .home-h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #333;
+    margin-top: 20px;
+    font-weight: 700;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .home-h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 15px auto;
+    width: 80%;
+    color: #666;
+    animation: fadeInUp 1.5s ease-out;
+  }
+  
+  /* Images */
+  img {
+    display: block;
+    max-width: 90%;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  img:hover {
+    transform: scale(1.02);
+  }
+  
+  /* CourseList Page */
+  .courselist-maindiv {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .courselist-h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #222;
+    margin-bottom: 40px;
+  }
+  
+  .courselist-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+  
+  .courselist-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .courselist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .courselist-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .courselist-card-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .courselist-card-title {
+    font-size: 1.3rem;
+    color: #0066cc;
+    margin: 0;
+  }
+  
+  /* CourseDetails Page */
+  .course-details {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-title {
+    font-size: 2rem;
+    color: #0066cc;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .course-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .course-details p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #444;
+  }
+  
+  .course-details strong {
+    color: #222;
+  }
+  
+  .spinner,
+  .error {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    padding: 40px;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
     }
-
+  
     .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
     }
-
+  
     .nav-links a {
-        font-size: 16px;
+      font-size: 16px;
     }
-
-    /* Adjust the grid for smaller screens */
-    .course-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  
+    .home-h1 {
+      font-size: 2.2rem;
     }
-
+  
+    .home-h2 {
+      font-size: 1.8rem;
+    }
+  
+    .home-h3 {
+      font-size: 1rem;
+      width: 95%;
+    }
+  
+    img {
+      max-width: 100%;
+    }
+  
+    .courselist-h1 {
+      font-size: 2rem;
+    }
+  
+    .courselist-card-title {
+      font-size: 1.1rem;
+    }
+  
+    .course-details {
+      padding: 20px;
+      margin: 20px;
+    }
+  
     .course-title {
-        font-size: 18px;
+      font-size: 1.5rem;
     }
-}
+  
+    .course-details p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
