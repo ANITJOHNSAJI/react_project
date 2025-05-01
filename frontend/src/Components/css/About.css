@@ -1,77 +1,79 @@
-/* About.css */
 
 .about-maindiv {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 .about-div {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     background-color: #fff;
-    padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .about-h1 {
     text-align: center;
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 34px;
+    color: #222;
+    margin-bottom: 16px;
 }
 
 .about-h3 {
     text-align: center;
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 40px;
-    line-height: 1.5;
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
 }
 
 .about-div1, .about-div2 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 40px;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .about-h2 {
-    font-size: 28px;
+    font-size: 26px;
     color: #333;
     margin-bottom: 20px;
     width: 100%;
+    text-align: center;
 }
 
 .about-div1 img, .about-div2 img {
+    flex: 1 1 400px;
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-div1 p, .about-div2 p {
+    flex: 1 1 400px;
     font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-    width: 48%;
+    color: #444;
+    line-height: 1.7;
+    text-align: justify;
 }
 
 .about-div3 {
     text-align: center;
     margin-top: 40px;
+    color: #666;
 }
 
 @media (max-width: 768px) {
-    .about-div1 p, .about-div2 p {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
     .about-div1, .about-div2 {
         flex-direction: column;
-        align-items: center;
+    }
+
+    .about-div1 p, .about-div2 p {
+        width: 100%;
     }
 }
